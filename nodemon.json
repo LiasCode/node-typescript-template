@@ -1,0 +1,10 @@
+{
+  "verbose": false,
+  "ignore": ["*.test.js", "**/fixtures/**", "src/**/*.spec.ts"],
+  "events": {
+    "restart": "clear"
+  },
+  "watch": ["src"],
+  "ext": "ts,json,js",
+  "exec": "ts-node ./src/main.ts"
+}

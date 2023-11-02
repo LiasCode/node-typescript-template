@@ -14,7 +14,7 @@ node_modules
 
 .DS_Store
 
-/build
+build
 dist
 package-lock.json
 /.history

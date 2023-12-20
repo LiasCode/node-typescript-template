@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "outDir": "./built",
     "allowJs": true,
@@ -6,8 +7,13 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "alwaysStrict": true
+    "alwaysStrict": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
   },
-  "include": ["./src/**/*"],
+  "include": ["./src"],
   "exclude": ["node_modules"]
 }

@@ -4,12 +4,12 @@ import cors from "cors";
 import express, { Application } from "express";
 import helmet from "helmet";
 import morgan from "morgan";
+import { GlobalRouter } from "./router/router";
 
 // --------- SETUP APP -------------
 export const App: Application = express();
 
 // ---------- APP SETTINGS ------------
-App.set("env", "production");
 App.set("PORT", process.env.PORT || 3030);
 App.disable("x-powered-by");
 
@@ -23,13 +23,10 @@ App.use(bodyParser.json());
 App.use(bodyParser.text());
 App.use(bodyParser.raw());
 
-// ------------- ROUTER ------------
-App.use(express.static(process.cwd() + "/public"));
+// ---------- ROUTER ---------
+App.use(GlobalRouter);
 
-App.get("*", (_, res) => {
-  return res.send("<h1>Hello World</h1>");
-});
-
+// ---------- HANDLING ERROR ---------
 App.once("error", (error) => {
   console.log({ error });
   process.exit(1);

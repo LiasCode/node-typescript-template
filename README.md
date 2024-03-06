@@ -1,7 +1,1 @@
-# STARTER TEMPLATE FOR TYPESCRIPT, NODE JS and EXPRESS JS
-
-## INCLUDES:
-  * TYPESCRIPT
-  * EXPRESS JS
-  * PRETTIER
-  * NODEMON
+### Template for bootstrap projects in nodejs with Typescript and Express web framework

@@ -4,11 +4,11 @@
   "description": "Template for use Typescript in nodejs",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=production node ./dist/main.js",
-    "build": "tsc -p ./tsconfig.json",
-    "dev": "ts-node-dev --watch ./src  --clear --ignore-watch node_modules ./src/main.ts",
-    "format": "prettier --write 'src/**/*.{js,ts,json}' --config .prettierrc.json",
-    "check-types": "tsc --noEmit -p ./tsconfig.json"
+    "start": "cross-env NODE_ENV=production node ./dist/main.js",
+    "build": "cross-env tsc -p ./tsconfig.json",
+    "dev": "cross-env ts-node-dev --watch ./src  --clear --ignore-watch node_modules ./src/main.ts",
+    "format": "cross-env prettier --write 'src/**/*.{js,ts,json}' --config .prettierrc.json",
+    "check-types": "cross-env tsc --noEmit -p ./tsconfig.json"
   },
   "keywords": [
     "node",
@@ -27,6 +27,7 @@
     "compression": "1.7.4",
     "cookie-parser": "1.4.6",
     "cors": "2.8.5",
+    "cross-env": "7.0.3",
     "dotenv": "16.3.1",
     "express": "4.18.2",
     "express-promise-router": "4.1.1",

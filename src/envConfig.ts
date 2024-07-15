@@ -7,7 +7,7 @@ const envSchema = z.object({
   PORT: z.string(),
 });
 
-const res = envSchema.safeParse(process.env)
+const res = envSchema.safeParse(process.env);
 
 if (!res.success) {
   throw new Error("Env schema validation fails");
@@ -18,4 +18,3 @@ declare global {
     interface ProcessEnv extends z.infer<typeof envSchema> {}
   }
 }
-

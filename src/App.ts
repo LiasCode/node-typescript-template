@@ -10,7 +10,7 @@ import { GlobalRouter } from "./router/router";
 export const App: Application = express();
 
 // ---------- APP SETTINGS ------------
-App.set("PORT", process.env.PORT || 3030);
+App.set("PORT", process.env.PORT);
 App.disable("x-powered-by");
 
 // ---------- MIDDLEWARES ---------

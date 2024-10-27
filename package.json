@@ -19,10 +19,12 @@
   "author": "LiasCode",
   "dependencies": {
     "bcrypt": "5.1.1",
+    "better-sqlite3": "^11.5.0",
     "body-parser": "^1.20.3",
     "compression": "1.7.4",
     "cookie-parser": "^1.4.7",
     "cors": "2.8.5",
+    "date-fns": "^4.1.0",
     "dotenv": "16.4.5",
     "express": "^4.21.1",
     "express-promise-router": "4.1.1",
@@ -35,6 +37,7 @@
   },
   "devDependencies": {
     "@types/bcrypt": "5.0.2",
+    "@types/better-sqlite3": "^7.6.11",
     "@types/body-parser": "1.19.5",
     "@types/compression": "1.7.5",
     "@types/cookie-parser": "1.4.7",

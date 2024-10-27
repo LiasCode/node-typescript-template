@@ -15,7 +15,9 @@ ServerApp.disable("x-powered-by");
 // ---------- MIDDLEWARES ---------
 ServerApp.use(compression());
 ServerApp.use(helmet());
-ServerApp.use(morgan("dev"));
+if (process.env.NODE_ENV !== "production") {
+  ServerApp.use(morgan("dev"));
+}
 ServerApp.use(cors());
 ServerApp.use(bodyParser.urlencoded({ extended: false }));
 ServerApp.use(bodyParser.json());
@@ -27,10 +29,10 @@ ServerApp.use(GlobalRouter);
 
 // ---------- HANDLING ERROR ---------
 ServerApp.once("error", (error) => {
-  console.log({ error });
+  console.error({ error });
   process.exit(1);
 });
 
 ServerApp.on("uncaughtException", (error) => {
-  console.log({ uncaughtException: error });
+  console.error({ uncaughtException: error });
 });

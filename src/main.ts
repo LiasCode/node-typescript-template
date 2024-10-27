@@ -1,13 +1,12 @@
 import http from "node:http";
-import { logger } from "./Logger";
-import { App } from "./App";
-import "./envConfig";
+import { ServerApp } from "./ServerApp";
+import "./EnvParser";
 
 // ----------- INIT SERVER ---------
-http.createServer(App).listen(process.env.PORT, () => {
-  logger.info("Server listen on PORT: " + process.env.PORT);
+http.createServer(ServerApp).listen(process.env.PORT, () => {
+  console.log("Server listen on PORT: " + process.env.PORT);
 });
 
 process.on("uncaughtException", (error) => {
-  logger.error(`Uncaught Exception : ${error.message}`);
+  console.error(`Uncaught Exception : ${error.message}`);
 });

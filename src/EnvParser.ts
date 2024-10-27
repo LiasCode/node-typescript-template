@@ -10,7 +10,7 @@ const envSchema = z.object({
 const res = envSchema.safeParse(process.env);
 
 if (!res.success) {
-  throw new Error("Env schema validation fails");
+  throw new Error(`Env schema validation fails \n${res.error}`);
 }
 
 declare global {

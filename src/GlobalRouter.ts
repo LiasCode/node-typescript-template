@@ -1,6 +1,6 @@
 import { Router } from "express";
 import express from "express";
-import { HealthRouter } from "./health";
+import { HealthRouter } from "./router/HealthRouter";
 
 // ------------- ROUTER ------------
 export const GlobalRouter = Router();

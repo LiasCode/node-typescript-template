@@ -7,26 +7,27 @@
     "start": "NODE_ENV=production node ./dist/main.js",
     "build": "tsc -p ./tsconfig.json",
     "dev": "ts-node-dev --watch ./src  --clear --ignore-watch node_modules ./src/main.ts",
-    "format": "prettier ./src --ignore-unknown --write --config .prettierrc.json",
-    "check-types": "tsc --noEmit -p ./tsconfig.json"
+    "format": "prettier ./src --ignore-unknown --write --config .prettierrc.json"
   },
   "keywords": [
     "node",
-    "nodejs",
     "typescript",
-    "template"
+    "template",
+    "express",
+    "nodejs",
+    "sqlite"
   ],
   "author": "LiasCode",
   "dependencies": {
     "bcrypt": "5.1.1",
-    "better-sqlite3": "^11.5.0",
-    "body-parser": "^1.20.3",
+    "better-sqlite3": "11.5.0",
+    "body-parser": "1.20.3",
     "compression": "1.7.4",
-    "cookie-parser": "^1.4.7",
+    "cookie-parser": "1.4.7",
     "cors": "2.8.5",
-    "date-fns": "^4.1.0",
+    "date-fns": "4.1.0",
     "dotenv": "16.4.5",
-    "express": "^4.21.1",
+    "express": "4.21.1",
     "express-promise-router": "4.1.1",
     "helmet": "7.1.0",
     "http-status-codes": "2.3.0",
@@ -37,7 +38,7 @@
   },
   "devDependencies": {
     "@types/bcrypt": "5.0.2",
-    "@types/better-sqlite3": "^7.6.11",
+    "@types/better-sqlite3": "7.6.11",
     "@types/body-parser": "1.19.5",
     "@types/compression": "1.7.5",
     "@types/cookie-parser": "1.4.7",
@@ -50,7 +51,7 @@
     "@types/uuid": "9.0.8",
     "prettier": "3.2.5",
     "ts-node": "10.9.2",
-    "ts-node-dev": "^2.0.0",
+    "ts-node-dev": "2.0.0",
     "typescript": "5.4.5"
   }
 }

@@ -1,6 +1,6 @@
 ## Typescript / Express / Node / Sqlite
 
-_Setup your backend fast_
+_Setup your node backend fast_
 
 ### Principal Scripts
 

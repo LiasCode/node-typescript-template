@@ -16,7 +16,10 @@ node_modules
 
 build
 dist
-package-lock.json
 /.history
 /.vscode
 !/.vscode/settings.example.json
+
+package-lock.json
+pnpm-lock.yaml
+bun.lockb

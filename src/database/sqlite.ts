@@ -1,5 +1,5 @@
-import Database from "better-sqlite3";
+import { createClient } from "@libsql/client";
 
-export const sqliteClient = new Database(":memory:", {});
-
-sqliteClient.pragma("journal_mode = WAL");
+export const sqliteClient = createClient({
+  url: ":memory:",
+});
